@@ -1,0 +1,227 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{998CA388-27D8-44C0-8746-874A4A84D173}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>LevelManagerEx.Shell</RootNamespace>
+    <AssemblyName>LevelManagerEx.Shell</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <RunCodeAnalysis>false</RunCodeAnalysis>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="NETHook3_0">
+      <HintPath>E:\Program Files\mcamx9\NETHook3_0.dll</HintPath>
+    </Reference>
+    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.3.2.0.0\lib\net45-full\Ninject.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Ninject.Extensions.Conventions, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
+      <HintPath>..\packages\Ninject.Extensions.Conventions.3.2.0.0\lib\net45-full\Ninject.Extensions.Conventions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Reactive.EventAggregator, Version=2.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Reactive.EventAggregator.2.0.0\lib\net45\Reactive.EventAggregator.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Reactive.Core, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Core.2.2.5\lib\net45\System.Reactive.Core.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Interfaces, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Interfaces.2.2.5\lib\net45\System.Reactive.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.Linq, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-Linq.2.2.5\lib\net45\System.Reactive.Linq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Reactive.PlatformServices, Version=2.2.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Rx-PlatformServices.2.2.5\lib\net45\System.Reactive.PlatformServices.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Commands\ButtonBase.cs" />
+    <Compile Include="Commands\CloseShellCommand.cs" />
+    <Compile Include="Commands\CommandBase.cs" />
+    <Compile Include="Commands\CreateFolderCommand.cs" />
+    <Compile Include="Commands\IButtonsCommand.cs" />
+    <Compile Include="Commands\ICommandBase.cs" />
+    <Compile Include="Commands\IToolbarCommand.cs" />
+    <Compile Include="Events\CloseShellMessage.cs" />
+    <Compile Include="Events\CreateFolderMessage.cs" />
+    <Compile Include="FunctionTable\Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Interfaces\IButtonView.cs" />
+    <Compile Include="Interfaces\IInformationView.cs" />
+    <Compile Include="Interfaces\ILevelsView.cs" />
+    <Compile Include="Interfaces\IShellView.cs" />
+    <Compile Include="Interfaces\IToolbarView.cs" />
+    <Compile Include="Localization\LocalizationStrings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LocalizationStrings.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\ShellModules.cs" />
+    <Compile Include="NethookMain.cs" />
+    <Compile Include="Presenters\ShellViewPresenter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FileManagerService.cs" />
+    <Compile Include="Services\IFileManagerService.cs" />
+    <Compile Include="Services\IMessageBoxService.cs" />
+    <Compile Include="Services\ISystemInformationService.cs" />
+    <Compile Include="Services\MessageBoxService.cs" />
+    <Compile Include="Services\SystemInformationService.cs" />
+    <Compile Include="Presenters\ButtonsPresenter.cs" />
+    <Compile Include="Views\ButtonView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ButtonView.Designer.cs">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Views\InformationView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\InformationView.Designer.cs">
+      <DependentUpon>InformationView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\InformationViewPresenter.cs" />
+    <Compile Include="Views\LevelsView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\LevelsView.Designer.cs">
+      <DependentUpon>LevelsView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\LevelsViewPresenter.cs" />
+    <Compile Include="Views\Shell.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\Shell.Designer.cs">
+      <DependentUpon>Shell.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Presenters\ToolbarPresenter.cs" />
+    <Compile Include="Views\ToolbarView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Views\ToolbarView.Designer.cs">
+      <DependentUpon>ToolbarView.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="FunctionTable\LevelManagerEx.Shell.ft" />
+    <None Include="packages.config" />
+    <None Include="ReadMeFirst\ProjectSetup.docx" />
+    <None Include="ReadMeFirst\ProjectSetup.pdf" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="FunctionTable\Resource.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Localization\LocalizationStrings.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>LocalizationStrings.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ButtonView.resx">
+      <DependentUpon>ButtonView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\InformationView.resx">
+      <DependentUpon>InformationView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\LevelsView.resx">
+      <DependentUpon>LevelsView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\Shell.resx">
+      <DependentUpon>Shell.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\ToolbarView.resx">
+      <DependentUpon>ToolbarView.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="FunctionTable\Assets\Run16.png" />
+    <Content Include="FunctionTable\Assets\Run24.png" />
+    <Content Include="ReadMeFirst\ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>copy "$(ProjectDir)\FunctionTable\LevelManagerEx.Shell.ft" "$(mcam)\chooks\LevelManagerEx.Shell.ft"
+copy "$(TargetPath)" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\Reactive.EventAggregator.dll" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\System.Reactive.Core.dll" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\System.Reactive.Interfaces.dll" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\System.Reactive.Linq.dll" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\App.config" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\Ninject.dll" "$(mcam)\chooks\LevelManager\"
+copy "$(TargetDir)\Ninject.Extensions.Conventions.dll" "$(mcam)\chooks\LevelManager\"</PostBuildEvent>
+  </PropertyGroup>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
