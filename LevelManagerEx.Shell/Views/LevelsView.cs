@@ -20,9 +20,18 @@ namespace LevelManagerEx.Shell.Views
             this.InitializeComponent();
 
             this.Tree.AfterSelect += (s, e) => this.OnSelectionChanged();
-            this.Tree.ItemDrag += (s, e) => this.OnLevelDrag();
-            this.Tree.DragDrop += (s, e) => this.OnLevelDragDrop();
-            this.Tree.DragEnter += (s, e) => this.OnLevelDragEnter();
+
+            this.Tree.ItemDrag += this.OnLevelDrag;
+            this.Tree.DragDrop += this.OnLevelDragDrop;
+            this.Tree.DragEnter += this.OnLevelDragEnter;
+            this.Tree.AfterLabelEdit += this.OnAfterLabelEdit;
+
+            this.Tree.AllowDrop = true;
+            this.Tree.FullRowSelect = true;
+            this.Tree.HideSelection = false;
+            this.Tree.Scrollable = true;
+            this.Tree.ShowLines = true;
+            this.Tree.LabelEdit = true;
 
             this.Load += (s, e) => this.OnViewLoad();
         }
@@ -43,6 +52,9 @@ namespace LevelManagerEx.Shell.Views
 
         /// <summary>The level drag.</summary>
         public event EventHandler LevelDrag;
+
+
+        public event EventHandler AfterLabelEdit;
 
         #endregion
 
@@ -83,22 +95,28 @@ namespace LevelManagerEx.Shell.Views
             handler?.Invoke(this, EventArgs.Empty);
         }
 
-        protected virtual void OnLevelDragEnter()
+        protected virtual void OnLevelDragEnter(object sender, DragEventArgs e)
         {
             var handler = this.LevelDragEnter;
-            handler?.Invoke(this, EventArgs.Empty);
+            handler?.Invoke(sender, e);
         }
 
-        protected virtual void OnLevelDragDrop()
+        protected virtual void OnLevelDragDrop(object sender, DragEventArgs e)
         {
             var handler = this.LevelDragDrop;
-            handler?.Invoke(this, EventArgs.Empty);
+            handler?.Invoke(sender, e);
         }
 
-        protected virtual void OnLevelDrag()
+        protected virtual void OnLevelDrag(object sender, ItemDragEventArgs e)
         {
             var handler = this.LevelDrag;
-            handler?.Invoke(this, EventArgs.Empty);
+            handler?.Invoke(sender, e);
+        }
+
+        protected virtual void OnAfterLabelEdit(object sender, NodeLabelEditEventArgs e)
+        {
+            var handler = this.AfterLabelEdit;
+            handler?.Invoke(sender, e);
         }
 
         #endregion

@@ -77,5 +77,32 @@ namespace LevelManagerEx.Shell.Localization {
                 return ResourceManager.GetString("CreateFolder", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to LEVELS.
+        /// </summary>
+        public static string LEVELS {
+            get {
+                return ResourceManager.GetString("LEVELS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Select Folder.
+        /// </summary>
+        public static string SelectFolder {
+            get {
+                return ResourceManager.GetString("SelectFolder", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Set folder name.
+        /// </summary>
+        public static string SetFolderName {
+            get {
+                return ResourceManager.GetString("SetFolderName", resourceCulture);
+            }
+        }
     }
 }

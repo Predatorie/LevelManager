@@ -30,6 +30,9 @@ namespace LevelManagerEx.Shell.Interfaces
         /// <summary>The drag enter.</summary>
         event EventHandler LevelDrag;
 
+        /// <summary>The after label edit.</summary>
+        event EventHandler AfterLabelEdit;
+
         /// <summary>Gets the selected node.</summary>
         TreeNode SelectedNode { get; }
 

@@ -110,6 +110,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resource.resx</DependentUpon>
     </Compile>
+    <Compile Include="Globals.cs" />
     <Compile Include="Interfaces\IButtonView.cs" />
     <Compile Include="Interfaces\IInformationView.cs" />
     <Compile Include="Interfaces\ILevelsView.cs" />
@@ -120,11 +121,16 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>LocalizationStrings.resx</DependentUpon>
     </Compile>
+    <Compile Include="Models\ILevel.cs" />
+    <Compile Include="Models\Level.cs" />
     <Compile Include="Models\ShellModules.cs" />
     <Compile Include="NethookMain.cs" />
+    <Compile Include="Presenters\NodeSelectedMessage.cs" />
     <Compile Include="Presenters\ShellViewPresenter.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\FileBrowserService.cs" />
     <Compile Include="Services\FileManagerService.cs" />
+    <Compile Include="Services\IFileBrowserService.cs" />
     <Compile Include="Services\IFileManagerService.cs" />
     <Compile Include="Services\IMessageBoxService.cs" />
     <Compile Include="Services\ISystemInformationService.cs" />
@@ -200,9 +206,32 @@
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="FunctionTable\Assets\EditApplyEnter16.png" />
+    <Content Include="FunctionTable\Assets\EditApplyEnter32.png" />
+    <Content Include="FunctionTable\Assets\EditCopy16.png" />
+    <Content Include="FunctionTable\Assets\EditCut16.png" />
+    <Content Include="FunctionTable\Assets\EditPaste16.png" />
+    <Content Include="FunctionTable\Assets\FileExit16.png" />
+    <Content Include="FunctionTable\Assets\FileExit32.png" />
+    <Content Include="FunctionTable\Assets\FileImportFolder16.png" />
+    <Content Include="FunctionTable\Assets\FileImportFolder32.png" />
+    <Content Include="FunctionTable\Assets\FileNew16.png" />
+    <Content Include="FunctionTable\Assets\FileNew32.png" />
+    <Content Include="FunctionTable\Assets\FileOpen16.png" />
+    <Content Include="FunctionTable\Assets\FileOpen32.png" />
+    <Content Include="FunctionTable\Assets\FileSave16.png" />
+    <Content Include="FunctionTable\Assets\FileSave32.png" />
+    <Content Include="FunctionTable\Assets\FileSaveAs16.png" />
+    <Content Include="FunctionTable\Assets\FileSaveAs32.png" />
+    <Content Include="FunctionTable\Assets\LevelManager16.png" />
+    <Content Include="FunctionTable\Assets\lock.bmp" />
     <Content Include="FunctionTable\Assets\Run16.png" />
     <Content Include="FunctionTable\Assets\Run24.png" />
+    <Content Include="FunctionTable\Assets\tptvfclo.bmp" />
+    <Content Include="FunctionTable\Assets\tptvfopn.bmp" />
+    <Content Include="FunctionTable\Assets\unlock.bmp" />
     <Content Include="ReadMeFirst\ReadMe.txt" />
+    <None Include="FunctionTable\Assets\addnewlevel1.png" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

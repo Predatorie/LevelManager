@@ -42,6 +42,8 @@ namespace LevelManagerEx.Shell.Models
             this.Kernel.Bind<ILevelsView>().To<LevelsView>().InSingletonScope();
             this.Kernel.Bind<IToolbarView>().To<ToolbarView>().InSingletonScope();
             this.Kernel.Bind<IShellView>().To<Shell>().InSingletonScope();
+
+            this.Kernel.Bind<ILevel>().To<Level>();
         }
     }
 }

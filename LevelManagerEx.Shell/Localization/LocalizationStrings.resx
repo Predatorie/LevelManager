@@ -123,4 +123,13 @@
   <data name="CreateFolder" xml:space="preserve">
     <value>Create Folder</value>
   </data>
+  <data name="LEVELS" xml:space="preserve">
+    <value>LEVELS</value>
+  </data>
+  <data name="SelectFolder" xml:space="preserve">
+    <value>Select Folder</value>
+  </data>
+  <data name="SetFolderName" xml:space="preserve">
+    <value>Set folder name</value>
+  </data>
 </root>

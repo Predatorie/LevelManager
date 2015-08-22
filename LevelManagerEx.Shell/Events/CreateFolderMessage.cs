@@ -13,6 +13,8 @@ namespace LevelManagerEx.Shell.Events
 
     /// <summary>The create folder message.</summary>
     public class CreateFolderMessage : EventArgs
-    {         
+    {
+        /// <summary>Gets or sets the name.</summary>
+        public string Name { get; set; }    
     }
 }
